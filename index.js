@@ -21,6 +21,8 @@ camera.position.setX(-3);
 
 const controls = new THREE.OrbitControls( camera, renderer.domElement );
 
+// const controls = new OrbitControls(camera, renderer.domElement);
+
 //controls.update();
 
 renderer.render(scene, camera);
@@ -39,7 +41,7 @@ scene.add(pointLight, ambientLight);
 // const gridHelper = new THREE.GridHelper(200, 50);
 // scene.add(lightHelper, gridHelper)
 
- const controls = new OrbitControls(camera, renderer.domElement);
+
 
 // Blender GLTF Model
 

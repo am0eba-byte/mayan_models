@@ -18,7 +18,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 
  renderer.setPixelRatio(window.devicePixelRatio);
  renderer.setSize(window.innerWidth, window.innerHeight);
- renderer.shadowMap.enabled = true;
+ //renderer.shadowMap.enabled = true;
   document.body.appendChild( renderer.domElement );
 
 camera.position.setZ(50);

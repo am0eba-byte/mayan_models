@@ -56,7 +56,7 @@ scene.add(pointLight, ambientLight);
   //  });
 
   const gltfLoader2 = new GLTFLoader();
-  const headURL = './models/stone_Face.gltf';
+  const headURL = './models/stoneFace.gltf';
   gltfLoader2.load(headURL, (gltf) => {
     const stonehead = gltf.scene;
     scene.add(stonehead);

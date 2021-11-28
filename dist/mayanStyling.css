@@ -3,17 +3,25 @@
 **************************/
 
 section.threeD {
-  display:grid;
+  /* display:grid; */
   width: 50vw;
   height: fit-content;
-  justify-content:space-around;
+  /* justify-content:space-around; */
   grid-template-columns: repeat(12, 1fr);
   align-self: center;
+  display: flex;
+justify-content: center;
+top: 0;
+position: relative;
 }
 
 canvas.model {
   width: 50vw;
   /* grid-column: 2 / span 5; */
+  position: relative;
+margin: auto;
+display: inline-flex;
+flex: fit-content;
 }
 
 

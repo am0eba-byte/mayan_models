@@ -77,8 +77,10 @@ scene.add(pointLight, ambientLight);
 
 function animate() {
     requestAnimationFrame(animate); 
-  
+
      controls.update();
+
+     window.addEventListener( 'resize', onWindowResize );
   
     renderer.render(scene, camera);
   }
@@ -90,7 +92,7 @@ function animate() {
   
     renderer.setSize( window.innerWidth, window.innerHeight );
   
-    render();
+    //render();
   
   }
   

@@ -1,3 +1,20 @@
+/*************************
+***3D Window 
+**************************/
+
+section.threeD {
+  display:grid;
+  width: 50vw;
+  height: fit-content;
+  justify-content:space-around;
+  grid-template-columns: repeat(12, 1fr);
+  align-self: center;
+}
+
+canvas.model {
+  width: 50vw;
+  /* grid-column: 2 / span 5; */
+}
 
 
 body {
@@ -8,6 +25,8 @@ body {
    /* font-family:arial, helvetica, sans-serif;*/
     padding: 10px;
     line-height:1.4em;
+    display: flex;
+flex-direction: column;
 }
 
 p.date {
@@ -18,18 +37,18 @@ span#date-time {
     font-family: 'Noto Sans Mayan Numerals', sans-serif;
 }
 
-section {
+/* section {
    background-color: #FFE8DDB5;
     border-radius: 25px;
    /* padding-top: 5%;
     padding-bottom: 5%;
     padding-left: 5%;
-    padding-right: 5%;*/
+    padding-right: 5%;
     padding: 3%;
    margin-top: 10px;
 margin-bottom: 10px;
-    /*opacity: .6;*/
-}
+    /*opacity: .6;
+} */
 
 
 /* *******************************
@@ -72,6 +91,12 @@ margin-bottom: 10px;
  * **************** HEADER STYLE 
  * *************************************************/
 
+header{
+  flex: 1;
+width: 100%;
+height: max-content;
+}
+
 
 div.titlePic {
     display:flex;
@@ -80,7 +105,8 @@ div.titlePic {
 
 img.headImg {
     width: 85%;
-height: 25vh;
+    min-height: 25vh;
+    max-height: 200px;
 flex: 2;
 }
 

@@ -19,9 +19,9 @@ document.body.appendChild( renderer.domElement );
 camera.position.setZ(50);
 camera.position.setX(-3);
 
+const controls = new THREE.OrbitControls( camera, renderer.domElement );
 
-
-controls.update();
+//controls.update();
 
 renderer.render(scene, camera);
 

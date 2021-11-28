@@ -1,4 +1,6 @@
-import * as THREE from 'https://unpg.com/three@0.127.0/build/three.module.js';
+import * as THREE from 'https://unpkg.com/three/build/three.module.js';
+import { OrbitControls } from 'https://unpkg.com/three/examples/jsm/controls/OrbitControls.js';
+import{ GLTFLoader } from 'https://unpkg.com/three/examples/jsm/loaders/GLTFLoader.js';
 
 const scene = new THREE.Scene();
 
@@ -54,7 +56,7 @@ scene.add(pointLight, ambientLight);
   //  });
 
   const gltfLoader2 = new GLTFLoader();
-  const headURL = './models/stone_Face.gltf';
+  const headURL = './models/stoneFace.gltf';
   gltfLoader2.load(headURL, (gltf) => {
     const stonehead = gltf.scene;
     scene.add(stonehead);

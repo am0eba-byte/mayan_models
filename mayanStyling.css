@@ -31,6 +31,41 @@ transform: translate(0%, -35%);
 }
 
 
+/**********************************
+*** Model Navigator
+**********************************/
+
+div.modelNav{
+  display:flex;
+  flex-direction:row;
+  justify-content:space-between;
+  margin-left: 10vw;
+margin-right: 10vw;
+}
+
+a.button {
+  background-image: linear-gradient(to bottom left, #10A37C, #1B6C57);
+  border-radius: 10px;
+  padding: 5px;
+  padding-bottom: 10px;
+  padding-left:10px;
+  padding-right:10px;
+  vertical-align:middle;
+  text-decoration: wavy;
+  font-size: 1.5em;
+  color: black;
+  font-family: 'New Tegomin', serif;
+
+}
+
+a.button:hover {
+  background-color: linear-gradient(to bottom left, #1b5848, #658a80);
+  color: white;
+}
+
+
+
+
 body {
     /*background-color: #FFE8DD;*/
     background-image: url("images/Maya_Background_one.jpg");
@@ -276,7 +311,8 @@ padding: 2px;
 color: #FF7A23;
 font-family: 'Dokdo', cursive;
 font-size: 1.6em;
-
+position:absolute;
+bottom: 0;
 }
 
 div.foot {

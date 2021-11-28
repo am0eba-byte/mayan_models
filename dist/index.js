@@ -8,27 +8,23 @@ const scene = new THREE.Scene();
 
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
-const canvas = document.querySelector('.model');
+// const canvas = document.querySelector('.model');
 
-const renderer = new THREE.WebGLRenderer({canvas});
+// const renderer = new THREE.WebGLRenderer({canvas});
 
-// const renderer = new THREE.WebGLRenderer({
-//   canvas: document.querySelector('.model'),
-// });
+ const renderer = new THREE.WebGLRenderer({
+   canvas: document.querySelector('.model'),
+ });
 
-// renderer.setPixelRatio(window.devicePixelRatio);
-// renderer.setSize(window.innerWidth, window.innerHeight);
-// renderer.shadowMap.enabled = true;
-// document.body.appendChild( renderer.domElement );
+ renderer.setPixelRatio(window.devicePixelRatio);
+ renderer.setSize(window.innerWidth, window.innerHeight);
+ renderer.shadowMap.enabled = true;
+  document.body.appendChild( renderer.domElement );
 
 camera.position.setZ(50);
 camera.position.setX(-3);
 
 const controls = new OrbitControls( camera, renderer.domElement );
-
-// const controls = new OrbitControls(camera, renderer.domElement);
-
-//controls.update();
 
 renderer.render(scene, camera);
 
@@ -76,18 +72,33 @@ scene.add(pointLight, ambientLight);
    //  stonehead.rotateZ(180);
   });
 
+  // Failed Display Resize Attempts
 
-  function resizeRendererToDisplaySize(renderer) {
-    const canvas = renderer.domElement;
-    const pixelRatio = window.devicePixelRatio;
-    const width  = canvas.clientWidth  * pixelRatio | 0;
-    const height = canvas.clientHeight * pixelRatio | 0;
-    const needResize = canvas.width !== width || canvas.height !== height;
-    if (needResize) {
-      renderer.setSize(width, height, false);
-    }
-    return needResize;
-  }
+ // function resizeRendererToDisplaySize(renderer) {
+  //   const canvas = renderer.domElement;
+  //   const width = canvas.clientWidth;
+  //   const height = canvas.clientHeight;
+  //   const needResize = canvas.width !== width || canvas.height !== height;
+  //   if (needResize) {
+  //     renderer.setSize(width, height, false);
+  //     camera.aspect = canvas.clientWidth / canvas.clientHeight;
+  //     camera.updateProjectionMatrix()
+  //   }
+  //  // return needResize;
+  // }
+
+
+  // function resizeRendererToDisplaySize(renderer) {
+  //   const canvas = renderer.domElement;
+  //   const pixelRatio = window.devicePixelRatio;
+  //   const width  = canvas.clientWidth  * pixelRatio | 0;
+  //   const height = canvas.clientHeight * pixelRatio | 0;
+  //   const needResize = canvas.width !== width || canvas.height !== height;
+  //   if (needResize) {
+  //     renderer.setSize(width, height, false);
+  //   }
+  //   return needResize;
+  // }
 
 
 // Animation Loop
@@ -96,11 +107,11 @@ function animate() {
 
   //resizeRendererToDisplaySize();
 
-  if (resizeRendererToDisplaySize(renderer)) {
-    const canvas = renderer.domElement;
-    camera.aspect = canvas.clientWidth / canvas.clientHeight;
-    camera.updateProjectionMatrix();
-  }
+  // if (resizeRendererToDisplaySize(renderer)) {
+  //   const canvas = renderer.domElement;
+  //   camera.aspect = canvas.clientWidth / canvas.clientHeight;
+  //   camera.updateProjectionMatrix();
+  // }
 
 
     requestAnimationFrame(animate); 
@@ -123,21 +134,4 @@ function animate() {
   
   }
 
-  // function resizeRendererToDisplaySize(renderer) {
-  //   const canvas = renderer.domElement;
-  //   const width = canvas.clientWidth;
-  //   const height = canvas.clientHeight;
-  //   const needResize = canvas.width !== width || canvas.height !== height;
-  //   if (needResize) {
-  //     renderer.setSize(width, height, false);
-  //     camera.aspect = canvas.clientWidth / canvas.clientHeight;
-  //     camera.updateProjectionMatrix()
-  //   }
-  //  // return needResize;
-  // }
-
-  
-  
-  
-  // loadGLTF();
   animate();

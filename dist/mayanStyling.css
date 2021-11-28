@@ -18,7 +18,7 @@ position: relative;
 canvas.model {
   width: 50vw;
   /* grid-column: 2 / span 5; */
-  position: relative;
+  position: absolute;
 margin: auto;
 display: inline-flex;
 flex: fit-content;

@@ -1,0 +1,301 @@
+
+
+body {
+    /*background-color: #FFE8DD;*/
+    background-image: url("images/Maya_Background_one.jpg");
+    background-position:center;
+    color:black;
+   /* font-family:arial, helvetica, sans-serif;*/
+    padding: 10px;
+    line-height:1.4em;
+}
+
+p.date {
+    text-align:right;
+}
+
+span#date-time {
+    font-family: 'Noto Sans Mayan Numerals', sans-serif;
+}
+
+section {
+   background-color: #FFE8DDB5;
+    border-radius: 25px;
+   /* padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 5%;
+    padding-right: 5%;*/
+    padding: 3%;
+   margin-top: 10px;
+margin-bottom: 10px;
+    /*opacity: .6;*/
+}
+
+
+/* *******************************
+ * FONTS
+ * ***************************** */
+ 
+ /* 
+  *     font-family: 'Dokdo', cursive;
+
+    font-family: 'Fredericka the Great', cursive;
+
+    font-family: 'Frijole', cursive;
+
+    font-family: 'New Tegomin', serif;
+
+    font-family: 'Red Hat Display', sans-serif;
+
+    font-family: 'Walter Turncoat', cursive;
+  */
+
+
+
+/* ******************************
+ * THEME COLORS
+ * 
+ * .rusty red { color: #A33F21; }
+.pinkish { color: #FF8A66; }
+.greenish blue { color: #10A37C; }
+.light teal { color: #48F0C3; }
+ * 
+
+ * **************************** */
+
+
+
+
+
+
+/***************************************************
+ * **************** HEADER STYLE 
+ * *************************************************/
+
+
+div.titlePic {
+    display:flex;
+    flex-direction:row;
+}
+
+img.headImg {
+    width: 85%;
+height: 25vh;
+flex: 2;
+}
+
+header h1 {
+	font-family: 'Frijole', cursive;
+	font-size: 35px;
+	letter-spacing: 1px; 
+	margin-bottom: 20px; 
+	color: #10A37C;
+	display:flex;
+	flex-direction:column;
+	justify-content: space-evenly;
+	text-align:center;
+	text-shadow: 2px 2px black;
+	flex:1;
+}
+
+header h1 span {
+    line-height: 1em;
+}
+
+
+
+/*******************************************
+ * ************** NAV BAR 
+ * *****************************************/
+
+
+
+.names{
+    padding-left: 20px;
+}
+iframe {
+       width: 100%;
+       height: 700px;
+       border: none;
+       border-radius: 25px;
+}
+div.navbar {
+  list-style-type: none;
+  margin: 0;
+  padding: 5px;
+  overflow: hidden;
+  background-image: linear-gradient(to bottom left, #10A37C, #1B6C57);
+  margin: 0;
+  /*padding: 20px 20px 20px 20px;*/
+  overflow: hidden;
+  
+  color: #FF7A23;
+   /*font-family: 'Dokdo', cursive;*/
+   font-family: 'Walter Turncoat', cursive;
+   font-size:1.2em;
+   display: flex;
+justify-content: space-evenly;
+}
+
+
+
+a.nav {
+  float: left;
+}
+a.nav {
+  /*display: block;*/
+  color: #000000;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: wavy underline;
+}
+a.nav:hover {
+  background-color: #48F0C3;
+}
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+}
+
+img.banner {
+    width:100%;
+    height: 30vh;
+}
+
+
+
+/* The dropdown container */
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+ font-size: 1.2em;
+  border: none;
+  outline: none;
+  /*color: white;
+  padding: 14px 16px;*/
+  background-color: inherit;
+  font-family: inherit; 
+  margin: 0; 
+  text-decoration: wavy underline;
+}
+
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #48F0C3;
+}
+/*#10A37C; }
+.light teal { color: #48F0C3;*/
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: wavy underline;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+} 
+
+
+
+
+/*************************** ************************
+ * ***************FOOTER STYLE 
+ * **************************************************/
+
+footer {
+    background-image: linear-gradient(to bottom right, #10A37C, #1B6C57);
+padding: 2px;
+color: #FF7A23;
+font-family: 'Dokdo', cursive;
+font-size: 1.6em;
+
+}
+
+div.foot {
+    display: flex;
+flex-direction:row;
+justify-content: space-between;
+}
+
+div.footLinks {
+    display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+}
+
+p.foot {
+    line-height: 1.5em;
+    margin:0;
+}
+
+p.foot a {
+    color: white
+}
+
+p.foot a:hover {
+    color:#A33F21;
+}
+
+img.foot {
+   width: 8vw;
+height: 12vh;
+}
+
+
+/**************************************************
+ * ************** SPLASH PAGE STYLE 
+ * ************************************************/
+
+h2 { 
+	 
+	 font-family: 'Walter Turncoat', cursive;
+	font-size: 2.2em;
+	letter-spacing: 1px; 
+	text-align: center;
+	text-shadow: 2px 2px black;
+	margin-bottom: 5px; 
+	color: #10A37C;
+	opacity: 1;
+}
+p { 
+    margin-top: 1.5em;
+	text-align: center;
+	font-size: 18px;
+	color: #000000;
+	font-family: 'New Tegomin', serif;
+	opacity:1;
+}
+
+h3 {
+    font-family: 'Dokdo', cursive;
+    /*text-shadow: 2px 2px black;*/
+}
+

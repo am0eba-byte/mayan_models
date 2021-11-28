@@ -19,7 +19,7 @@ document.body.appendChild( renderer.domElement );
 camera.position.setZ(50);
 camera.position.setX(-3);
 
-const controls = new THREE.OrbitControls( camera, renderer.domElement );
+const controls = new OrbitControls( camera, renderer.domElement );
 
 // const controls = new OrbitControls(camera, renderer.domElement);
 

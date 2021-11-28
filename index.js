@@ -1,6 +1,7 @@
 import * as THREE from 'https://cdn.skypack.dev/three@0.128.0/build/three.module.js';
 import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/controls/OrbitControls.js';
-import{ GLTFLoader } from 'https://cdn.skypack.dev/three-gltf-loader';
+import threeGltfLoader from 'https://cdn.skypack.dev/three-gltf-loader';
+//import{ GLTFLoader } from 'https://cdn.skypack.dev/pin/three-gltf-loader@v1.111.0-lpoUKlYnYlsaDhVQnn4i/mode=imports/optimized/three-gltf-loader.js';
 
 const scene = new THREE.Scene();
 
@@ -43,7 +44,7 @@ scene.add(pointLight, ambientLight);
 // Blender GLTF Model
 
 
-  //  const gltfLoader = new GLTFLoader();
+  //  const gltfLoader = new threeGltfLoader();
   //  const boneurl = './models/heroTwinsBone.gltf';
   //  gltfLoader.load(boneurl, (gltf) => {
   //    const bone = gltf.scene;
@@ -55,7 +56,7 @@ scene.add(pointLight, ambientLight);
      
   //  });
 
-  const gltfLoader2 = new GLTFLoader();
+  const gltfLoader2 = new threeGltfLoader();
   const headURL = './models/stoneFace.gltf';
   gltfLoader2.load(headURL, (gltf) => {
     const stonehead = gltf.scene;

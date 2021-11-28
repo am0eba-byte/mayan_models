@@ -16,10 +16,10 @@ const renderer = new THREE.WebGLRenderer({canvas});
 //   canvas: document.querySelector('.model'),
 // });
 
-renderer.setPixelRatio(window.devicePixelRatio);
-renderer.setSize(window.innerWidth, window.innerHeight);
-renderer.shadowMap.enabled = true;
-document.body.appendChild( renderer.domElement );
+// renderer.setPixelRatio(window.devicePixelRatio);
+// renderer.setSize(window.innerWidth, window.innerHeight);
+// renderer.shadowMap.enabled = true;
+// document.body.appendChild( renderer.domElement );
 
 camera.position.setZ(50);
 camera.position.setX(-3);
@@ -77,17 +77,30 @@ scene.add(pointLight, ambientLight);
   });
 
 
+  function resizeRendererToDisplaySize(renderer) {
+    const canvas = renderer.domElement;
+    const pixelRatio = window.devicePixelRatio;
+    const width  = canvas.clientWidth  * pixelRatio | 0;
+    const height = canvas.clientHeight * pixelRatio | 0;
+    const needResize = canvas.width !== width || canvas.height !== height;
+    if (needResize) {
+      renderer.setSize(width, height, false);
+    }
+    return needResize;
+  }
+
+
 // Animation Loop
 
 function animate() {
 
-  // if (resizeRendererToDisplaySize(renderer)) {
-  //   const canvas = renderer.domElement;
-  //   camera.aspect = canvas.clientWidth / canvas.clientHeight;
-  //   camera.updateProjectionMatrix();
-  // }
+  //resizeRendererToDisplaySize();
 
-  resizeRendererToDisplaySize();
+  if (resizeRendererToDisplaySize(renderer)) {
+    const canvas = renderer.domElement;
+    camera.aspect = canvas.clientWidth / canvas.clientHeight;
+    camera.updateProjectionMatrix();
+  }
 
 
     requestAnimationFrame(animate); 
@@ -110,18 +123,20 @@ function animate() {
   
   }
 
-  function resizeRendererToDisplaySize(renderer) {
-    const canvas = renderer.domElement;
-    const width = canvas.clientWidth;
-    const height = canvas.clientHeight;
-    const needResize = canvas.width !== width || canvas.height !== height;
-    if (needResize) {
-      renderer.setSize(width, height, false);
-      camera.aspect = canvas.clientWidth / canvas.clientHeight;
-      camera.updateProjectionMatrix()
-    }
-   // return needResize;
-  }
+  // function resizeRendererToDisplaySize(renderer) {
+  //   const canvas = renderer.domElement;
+  //   const width = canvas.clientWidth;
+  //   const height = canvas.clientHeight;
+  //   const needResize = canvas.width !== width || canvas.height !== height;
+  //   if (needResize) {
+  //     renderer.setSize(width, height, false);
+  //     camera.aspect = canvas.clientWidth / canvas.clientHeight;
+  //     camera.updateProjectionMatrix()
+  //   }
+  //  // return needResize;
+  // }
+
+  
   
   
   // loadGLTF();

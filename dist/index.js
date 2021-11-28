@@ -80,12 +80,14 @@ scene.add(pointLight, ambientLight);
 // Animation Loop
 
 function animate() {
-  
-  if (resizeRendererToDisplaySize(renderer)) {
-    const canvas = renderer.domElement;
-    camera.aspect = canvas.clientWidth / canvas.clientHeight;
-    camera.updateProjectionMatrix();
-  }
+
+  // if (resizeRendererToDisplaySize(renderer)) {
+  //   const canvas = renderer.domElement;
+  //   camera.aspect = canvas.clientWidth / canvas.clientHeight;
+  //   camera.updateProjectionMatrix();
+  // }
+
+  resizeRendererToDisplaySize();
 
 
     requestAnimationFrame(animate); 
@@ -115,8 +117,10 @@ function animate() {
     const needResize = canvas.width !== width || canvas.height !== height;
     if (needResize) {
       renderer.setSize(width, height, false);
+      camera.aspect = canvas.clientWidth / canvas.clientHeight;
+      camera.updateProjectionMatrix()
     }
-    return needResize;
+   // return needResize;
   }
   
   

@@ -76,7 +76,7 @@ scene2.add(pointLight, ambientLight);
     const gltfLoader = new GLTFLoader();
     const boneurl = './models/heroTwinsBone.gltf';
     gltfLoader.load(boneurl, (gltf) => {
-     const bone = gltf.scene2;
+     const bone = gltf.scene;
       scene2.add(bone);
 
       bone.position.y = 5;

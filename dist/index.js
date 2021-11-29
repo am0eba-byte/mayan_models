@@ -12,10 +12,10 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 const camera2 = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 
  const canvas = document.querySelector('#stoneHead');
- const canvas2 = document.querySelector('#monkeyBone')
+ const canvas2 = document.querySelector('#monkeyBone');
 
  const renderer = new THREE.WebGLRenderer({canvas});
- const renderer2 = new THREE.WebGLRenderer({canvas2})
+ const renderer2 = new THREE.WebGLRenderer({canvas2});
 
 //  const renderer = new THREE.WebGLRenderer({
 //    canvas: document.querySelector('#stoneHead'),
@@ -76,7 +76,7 @@ scene2.add(pointLight, ambientLight);
     const gltfLoader = new GLTFLoader();
     const boneurl = './models/heroTwinsBone.gltf';
     gltfLoader.load(boneurl, (gltf) => {
-     const bone = gltf.scene;
+     const bone = gltf.scene2;
       scene2.add(bone);
 
       bone.position.y = 5;

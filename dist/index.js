@@ -59,7 +59,7 @@ gltfLoader2.load(headURL, (gltf) => {
 
 
 
-renderer.render(scene, camera);
+renderer.render(scene2, camera);
 
 
 // Lights

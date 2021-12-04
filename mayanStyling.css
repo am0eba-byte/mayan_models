@@ -17,19 +17,14 @@ text-align:center;
 }
 
 canvas#stoneHead {
-  width: 50vw;
-  /* grid-column: 2 / span 5; */
-  /* position: inherit; */
-margin: 0 auto;
-display: block;
-flex: fit-content;
-max-height: 75%;
-max-width: 100%;
+  display: block;
+/* flex: fit-content; */
+/* max-height: 300px; */
+max-width: 80%;
 /* top: 50%;
 left: 50%; */
-transform: translate(0%, -35%);
-
-bottom: 0px;
+transform: translate(15%, 55%);
+bottom: 5px;
 position: absolute;
 left: 0px;
 right: 0px;

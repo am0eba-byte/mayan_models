@@ -67,7 +67,7 @@ renderer.render(scene2, camera);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 
-scene.add(ambientLight);
+scene2.add(ambientLight);
 
 
 // Helpers

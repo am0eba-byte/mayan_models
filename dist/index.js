@@ -108,10 +108,10 @@ function animate() {
   
     renderer.setSize( window.innerWidth, window.innerHeight );
 
-    camera2.aspect = window.innerWidth / window.innerHeight;
-    camera2.updateProjectionMatrix();
+    // camera2.aspect = window.innerWidth / window.innerHeight;
+    // camera2.updateProjectionMatrix();
   
-    renderer2.setSize( window.innerWidth, window.innerHeight );
+    // renderer2.setSize( window.innerWidth, window.innerHeight );
   
     //render();
   

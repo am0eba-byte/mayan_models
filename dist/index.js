@@ -44,7 +44,7 @@ const gltfLoader = new GLTFLoader();
 
 const scene2 = new THREE.Scene();
 const gltfLoader2 = new GLTFLoader();
-const headURL = './models/heroTwinsBone.gltf';
+const headURL = './models/stoneFace.gltf';
 gltfLoader2.load(headURL, (gltf) => {
   const stonehead = gltf.scene;
   scene2.add(stonehead);

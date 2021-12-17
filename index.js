@@ -175,7 +175,7 @@ window.addEventListener( 'resize', onWindowResize );
 
       stonehead.rotateX(110);
   stonehead.position.y = -2;
-  stonehead.scale.set(10, 10, 10);
+  stonehead.scale.set(8, 8, 8);
   
    });
 
@@ -203,7 +203,7 @@ const scene3 = new THREE.Scene();
 
       bone.rotateX(110);
   bone.position.y = -2;
-  bone.scale.set(15, 15, 15);
+  bone.scale.set(10, 10, 10);
   
    });
 

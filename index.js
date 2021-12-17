@@ -56,26 +56,18 @@ button4.addEventListener('click', spsAnimate);
 var button5 = document.getElementById('scene5');
 button5.addEventListener('click', munperAnimate);
 
-console.log('finished');
-// update();
-  }
+console.log('initialized');
+
+}
 
   
-// const scene = {}
+
 
 /////////////////////////////////
 // Button renderers
 ////////////////////////////////
 
 function cubeanimate(){
-
-  // if(scene3.visible = true){
-  //       scene3.visible = false
-  //     };
-  //     if(scene2.visible = true){
-  //       scene2.visible = false
-  //     };
-  //     scene1.visible = true
 
   scene1.add(mesh); 
   console.log('mesh added');
@@ -94,86 +86,51 @@ function cubeanimate(){
 
 
 function stoneheadAnimate(){
-  
+
+  console.log('start rendering stone model');
 
   requestAnimationFrame(stoneheadAnimate);
+     renderer.render(scene2, camera);
 
-  console.log('button successfully clicked')
-
-  window.addEventListener( 'resize', onWindowResize );
   
-  console.log('start rendering stone model');
-  
-  // if (scene2.visible !== false) {
-  //   renderer.render( scene2, camera );
-  // }
+     console.log('finish rendering stone model');
 
-  renderer.render(scene2, camera);
-
-  console.log('finish rendering stone model');
-
+    
+ window.addEventListener( 'resize', onWindowResize );
   controls.update();
-
-  // console.log('controls functional')
   
 };
 
 
 
 function boneAnimate(){
-  
-  
-  // if(scene1.visible = true){
-  //       scene1.visible = false
-  //     };
-  //     if(scene2.visible = true){
-  //       scene2.visible = false
-  //     };
-  //     scene3.visible = true;
+
+  console.log('start rendering bone model');
 
   requestAnimationFrame(boneAnimate);
-
-  console.log('button successfully clicked')
-
-  window.addEventListener( 'resize', onWindowResize );
-  
-  console.log('start rendering bone model');
-  
-
-    // if(scene3.visible = true){
-    //   console.log('requesting animation frame');
-      // renderer.render(scene3, camera);
-      
-    // };
-  
-
-  renderer.render(scene3, camera);
+    renderer.render(scene3, camera);
 
   console.log('finish rendering bone model');
+  
 
+  window.addEventListener( 'resize', onWindowResize );
   controls.update();
-
-  // console.log('controls functional')
  
 };
 
 
 
-
 function spsAnimate(){
 
-  requestAnimationFrame(spsAnimate);
-
-  console.log('button successfully clicked')
-
-  window.addEventListener( 'resize', onWindowResize );
-  
   console.log('start rendering stone model');
- 
-  renderer.render(scene4, camera);
 
-  console.log('finish rendering stone model');
+  requestAnimationFrame(spsAnimate);
+    renderer.render(scene4, camera);
 
+    console.log('finish rendering stone model');
+
+ window.addEventListener( 'resize', onWindowResize );
+  
   controls.update();
   
 };
@@ -181,18 +138,14 @@ function spsAnimate(){
 
 
 function munperAnimate(){
+  console.log('start rendering stone model');
 
   requestAnimationFrame(munperAnimate);
+   renderer.render(scene5, camera);
 
-  console.log('button successfully clicked')
+   console.log('finish rendering stone model');
 
-  window.addEventListener( 'resize', onWindowResize );
-  
-  console.log('start rendering stone model');
- 
-  renderer.render(scene5, camera);
-
-  console.log('finish rendering stone model');
+window.addEventListener( 'resize', onWindowResize );
 
   controls.update();
   
@@ -342,20 +295,6 @@ renderer.render(scene5, camera);
     
     }
 
-// Update 
-
-//  function update(){
-//   if (renderer.domElement.style.display !== 'none') {
-//     renderer.render( scene1, camera );
-//   }
-//  }
-
-
-
-    // Render
-// renderer.render(scene2, camera);
-// renderer.render(scene3, camera);
- 
 
 window.addEventListener('DOMContentLoaded', init, false);
 

@@ -30,6 +30,25 @@ left: 0px;
 right: 0px;
 }
 
+
+/******************************
+index description
+********************************/
+
+div.disclaimer{
+  background-color:rgb(209, 191, 142);
+  text-align:left;
+  
+  padding: 20px;
+margin-left: 5vw;
+margin-right: 5vw;
+}
+
+div.disclaimer p {
+  margin: 3px;
+  font-size:1.2em;
+}
+
 /*****************************
 SKETCHFAB
 ********************************/

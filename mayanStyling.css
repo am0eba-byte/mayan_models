@@ -49,6 +49,8 @@ div.modelNav{
   justify-content:space-between;
   margin-left: 10vw;
 margin-right: 10vw;
+margin-bottom: 20px;
+margin-top: 20px;
 }
 
 a.button {

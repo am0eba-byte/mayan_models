@@ -306,9 +306,9 @@ const scene5 = new THREE.Scene();
       scene5.add(MP);
       console.log('mundo perdido added to scene 5');
 
-    //  MP.rotateX(110);
+     MP.rotateX(110);
     //  MP.position.y = -2;
-    //  MP.scale.set(20, 20, 20);
+    MP.scale.set(20, 20, 20);
   
    });
 

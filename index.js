@@ -281,7 +281,7 @@ const scene4 = new THREE.Scene();
 
     //  sps.rotateX(110);
     //  sps.position.y = -2;
-     sps.scale.set(50, 50, 50);
+     sps.scale.set(30, 30, 30);
   
    });
 
@@ -306,9 +306,9 @@ const scene5 = new THREE.Scene();
       scene5.add(MP);
       console.log('mundo perdido added to scene 5');
 
-     MP.rotateX(110);
+    //  MP.rotateX(110);
     //  MP.position.y = -2;
-    MP.scale.set(50, 50, 50);
+    MP.scale.set(30, 30, 30);
   
    });
 

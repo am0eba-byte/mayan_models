@@ -9,28 +9,15 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 camera.position.z = 500;
 
 const canvas = document.querySelector('#c1');
-// const canvas2 = document.querySelector('#c2');
-// const canvas3 = document.querySelector('#c3');
-
 
 const renderer =  new THREE.WebGLRenderer({canvas});
-// const renderer2 = new THREE.WebGLRenderer({canvas2});
-// const renderer3 = new THREE.WebGLRenderer({canvas3});
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
-// renderer2.setSize(window.innerWidth, window.innerHeight);
-// renderer2.setPixelRatio(window.devicePixelRatio);
-// renderer3.setSize(window.innerWidth, window.innerHeight);
-// renderer3.setPixelRatio(window.devicePixelRatio);
 
 document.body.appendChild(renderer.domElement);
-// document.body.appendChild(renderer2.domElement);
-// document.body.appendChild(renderer3.domElement);
 
 const controls = new OrbitControls(camera, renderer.domElement);
-// const controls2 = new OrbitControls(camera, renderer2.domElement);
-// const controls3 = new OrbitControls(camera, renderer3.domElement);
 
 const ambientLight = new THREE.AmbientLight(0xffffff);
 

@@ -3,6 +3,39 @@ import { OrbitControls } from 'https://cdn.skypack.dev/three@0.128.0/examples/js
 import { GLTFLoader } from 'https://cdn.skypack.dev/three@0.128.0/examples/jsm/loaders/GLTFLoader.js';
 // import './mayanStyling.css';
 
+// Setup
+
+const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+camera.position.z = 500;
+
+const canvas = document.querySelector('#c1');
+// const canvas2 = document.querySelector('#c2');
+// const canvas3 = document.querySelector('#c3');
+
+
+const renderer =  new THREE.WebGLRenderer({canvas});
+// const renderer2 = new THREE.WebGLRenderer({canvas2});
+// const renderer3 = new THREE.WebGLRenderer({canvas3});
+
+renderer.setSize(window.innerWidth, window.innerHeight);
+renderer.setPixelRatio(window.devicePixelRatio);
+// renderer2.setSize(window.innerWidth, window.innerHeight);
+// renderer2.setPixelRatio(window.devicePixelRatio);
+// renderer3.setSize(window.innerWidth, window.innerHeight);
+// renderer3.setPixelRatio(window.devicePixelRatio);
+
+document.body.appendChild(renderer.domElement);
+// document.body.appendChild(renderer2.domElement);
+// document.body.appendChild(renderer3.domElement);
+
+const controls = new OrbitControls(camera, renderer.domElement);
+// const controls2 = new OrbitControls(camera, renderer2.domElement);
+// const controls3 = new OrbitControls(camera, renderer3.domElement);
+
+const ambientLight = new THREE.AmbientLight(0xffffff);
+
+
+
 
 // Buttons
 
@@ -85,7 +118,7 @@ function stoneheadAnimate(){
   
 };
 
-renderer.render(scene2, camera);
+
 
 function boneAnimate(){
   
@@ -124,7 +157,7 @@ function boneAnimate(){
  
 };
 
-renderer.render(scene3, camera);
+
 
 
 function spsAnimate(){
@@ -145,7 +178,7 @@ function spsAnimate(){
   
 };
 
-renderer.render(scene4, camera);
+
 
 function munperAnimate(){
 
@@ -165,39 +198,8 @@ function munperAnimate(){
   
 };
 
-renderer.render(scene5, camera);
 
 
-// Setup
-
-  const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
-  camera.position.z = 500;
-
-  const canvas = document.querySelector('#c1');
-  // const canvas2 = document.querySelector('#c2');
-  // const canvas3 = document.querySelector('#c3');
- 
-
-  const renderer =  new THREE.WebGLRenderer({canvas});
-  // const renderer2 = new THREE.WebGLRenderer({canvas2});
-  // const renderer3 = new THREE.WebGLRenderer({canvas3});
-
-  renderer.setSize(window.innerWidth, window.innerHeight);
-  renderer.setPixelRatio(window.devicePixelRatio);
-  // renderer2.setSize(window.innerWidth, window.innerHeight);
-  // renderer2.setPixelRatio(window.devicePixelRatio);
-  // renderer3.setSize(window.innerWidth, window.innerHeight);
-  // renderer3.setPixelRatio(window.devicePixelRatio);
-
-  document.body.appendChild(renderer.domElement);
-  // document.body.appendChild(renderer2.domElement);
-  // document.body.appendChild(renderer3.domElement);
-
-  const controls = new OrbitControls(camera, renderer.domElement);
-  // const controls2 = new OrbitControls(camera, renderer2.domElement);
-  // const controls3 = new OrbitControls(camera, renderer3.domElement);
-
-  const ambientLight = new THREE.AmbientLight(0xffffff);
 
 
 //////////////////////////////////////////////////
@@ -239,7 +241,7 @@ renderer.render(scene5, camera);
 
 
 scene2.add(ambientLight);
-
+renderer.render(scene2, camera);
 
 //////////////////////////////////////////////
 // SCENE 3 - HERO TWINS BONE
@@ -266,6 +268,7 @@ const scene3 = new THREE.Scene();
    });
 
 scene3.add(ambientLight);
+renderer.render(scene3, camera);
 
 
 //////////////////////////////////////////////
@@ -293,6 +296,7 @@ const scene4 = new THREE.Scene();
    });
 
 scene4.add(ambientLight);
+renderer.render(scene4, camera);
 
 
 //////////////////////////////////////////////
@@ -320,7 +324,7 @@ const scene5 = new THREE.Scene();
    });
 
 scene5.add(ambientLight);
-
+renderer.render(scene5, camera);
 
 
 

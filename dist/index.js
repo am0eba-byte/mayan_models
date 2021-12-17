@@ -85,6 +85,8 @@ function stoneheadAnimate(){
   
 };
 
+renderer.render(scene2, camera);
+
 function boneAnimate(){
   
   
@@ -122,6 +124,8 @@ function boneAnimate(){
  
 };
 
+renderer.render(scene3, camera);
+
 
 function spsAnimate(){
 
@@ -141,6 +145,8 @@ function spsAnimate(){
   
 };
 
+renderer.render(scene4, camera);
+
 function munperAnimate(){
 
   requestAnimationFrame(munperAnimate);
@@ -159,6 +165,7 @@ function munperAnimate(){
   
 };
 
+renderer.render(scene5, camera);
 
 
 // Setup
@@ -306,7 +313,7 @@ const scene5 = new THREE.Scene();
       scene5.add(MP);
       console.log('mundo perdido added to scene 5');
 
-      MP.rotateX(110);
+      MP.rotateY(110);
     //  MP.position.y = -2;
     MP.scale.set(25, 25, 25);
   

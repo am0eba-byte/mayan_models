@@ -16,7 +16,7 @@ position: relative;
 text-align:center;
 }
 
-canvas#c1 {
+canvas#stonehead {
   display: block;
 /* flex: fit-content; */
 /* max-height: 300px; */
@@ -36,9 +36,9 @@ index description
 ********************************/
 
 div.disclaimer{
-  background-color:rgb(209, 191, 142);
+  background-color:rgba(83, 149, 132, 0.35);
   text-align:left;
-  
+  border-radius: 25px;
   padding: 20px;
 margin-left: 5vw;
 margin-right: 5vw;

@@ -254,7 +254,7 @@ const scene3 = new THREE.Scene();
 
       bone.rotateX(110);
   bone.position.y = -2;
-  bone.scale.set(20, 20, 20);
+  bone.scale.set(30, 30, 30);
   
    });
 
@@ -281,7 +281,7 @@ const scene4 = new THREE.Scene();
 
     //  sps.rotateX(110);
     //  sps.position.y = -2;
-    //  sps.scale.set(20, 20, 20);
+     sps.scale.set(50, 50, 50);
   
    });
 
@@ -308,7 +308,7 @@ const scene5 = new THREE.Scene();
 
      MP.rotateX(110);
     //  MP.position.y = -2;
-    MP.scale.set(20, 20, 20);
+    MP.scale.set(50, 50, 50);
   
    });
 

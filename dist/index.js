@@ -235,7 +235,7 @@ function munperAnimate(){
 
       stonehead.rotateX(110);
   stonehead.position.y = -2;
-  stonehead.scale.set(20, 20, 20);
+  stonehead.scale.set(10, 10, 10);
   
    });
 
@@ -263,7 +263,7 @@ const scene3 = new THREE.Scene();
 
       bone.rotateX(110);
   bone.position.y = -2;
-  bone.scale.set(30, 30, 30);
+  bone.scale.set(15, 15, 15);
   
    });
 
@@ -291,7 +291,7 @@ const scene4 = new THREE.Scene();
 
     sps.rotateX(110);
     //  sps.position.y = -2;
-     sps.scale.set(30, 30, 30);
+     sps.scale.set(15, 15, 15);
   
    });
 
@@ -319,7 +319,7 @@ const scene5 = new THREE.Scene();
 
       MP.rotateY(110);
     //  MP.position.y = -2;
-    MP.scale.set(25, 25, 25);
+    MP.scale.set(15, 15, 15);
   
    });
 

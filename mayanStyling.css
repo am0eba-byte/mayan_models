@@ -39,14 +39,15 @@ div.disclaimer{
   background-color:rgba(83, 149, 132, 0.35);
   text-align:left;
   border-radius: 25px;
-  padding: 20px;
-margin-left: 5vw;
-margin-right: 5vw;
+  padding: 5vw;
+margin-left: 10vw;
+margin-right: 10vw;
 }
 
 div.disclaimer p {
   margin: 3px;
   font-size:1.2em;
+  
 }
 
 /*****************************

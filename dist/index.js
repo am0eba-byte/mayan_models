@@ -11,6 +11,7 @@ camera.position.z = 500;
 const canvas = document.querySelector('#c1');
 
 const renderer =  new THREE.WebGLRenderer({canvas});
+renderer.setClearColor(new THREE.Color("#1c1624"));
 
 renderer.setSize(window.innerWidth, window.innerHeight);
 renderer.setPixelRatio(window.devicePixelRatio);
@@ -19,8 +20,61 @@ document.body.appendChild(renderer.domElement);
 
 const controls = new OrbitControls(camera, renderer.domElement);
 
-const ambientLight = new THREE.AmbientLight(0xffffff);
+/* scene 2 lights */
+const ambientLight = new THREE.AmbientLight( 0xffffff );
+ambientLight.position.set( 100, 0, 110 )
+const light = new THREE.AmbientLight( 0x404040 )
+light.position.set(0, 100, 150);
+const light2 = new THREE.AmbientLight( 0x404040 )
+light2.position.set(-120, 0, -110);
+const pointlight = new THREE.PointLight( 0xffffff );
+pointlight.position.set( 90, 90, 90 );
+const pointlight2 = new THREE.PointLight( 0xffffff );
+pointlight2.position.set( -115, -70, 90 );
+const sphereSize = 1;
+const pointLightHelper = new THREE.PointLightHelper( pointlight2, sphereSize );
 
+/* scene 3 lights */
+const S3ambientLight = new THREE.AmbientLight( 0xffffff );
+S3ambientLight.position.set( 100, 0, 110 )
+const S3light = new THREE.AmbientLight( 0x404040 )
+S3light.position.set(0, 100, 150);
+const S3light2 = new THREE.AmbientLight( 0x404040 )
+S3light2.position.set(-120, 0, -110);
+const S3pointlight = new THREE.PointLight( 0xffffff );
+S3pointlight.position.set( 90, 90, 90 );
+const S3pointlight2 = new THREE.PointLight( 0xffffff );
+S3pointlight2.position.set( -115, -70, 90 );
+
+/* scene 4 lights */
+const S4ambientLight = new THREE.AmbientLight( 0xffffff );
+S4ambientLight.position.set( 100, 0, 110 )
+const S4light = new THREE.AmbientLight( 0x404040 )
+S4light.position.set(0, 100, 150);
+const S4light2 = new THREE.AmbientLight( 0x404040 )
+S4light2.position.set(-120, 0, -110);
+const S4pointlight = new THREE.PointLight( 0xffffff );
+S4pointlight.position.set( 90, 90, 90 );
+const S4pointlight2 = new THREE.PointLight( 0xffffff );
+S4pointlight2.position.set( -115, -70, 90 );
+
+/* scene 5 lights */
+const S5ambientLight = new THREE.AmbientLight( 0xffffff );
+S5ambientLight.position.set( 100, 0, 110 )
+const S5light = new THREE.AmbientLight( 0x404040 )
+S5light.position.set(0, 100, 150);
+const S5light2 = new THREE.AmbientLight( 0x404040 )
+S5light2.position.set(-120, 0, -110);
+const S5pointlight = new THREE.PointLight( 0xffffff );
+S5pointlight.position.set( 90, 90, 90 );
+const S5pointlight2 = new THREE.PointLight( 0xffffff );
+S5pointlight2.position.set( -115, -70, 90 );
+
+
+const backgroundTexture = new THREE.TextureLoader().load('images/jungleRuins.jpg');
+const backgroundTexture2 = new THREE.TextureLoader().load('images/uxmal.jpg')
+
+const axesHelper = new THREE.AxesHelper( 200 );
 
 
 
@@ -175,12 +229,18 @@ window.addEventListener( 'resize', onWindowResize );
 
       stonehead.rotateX(110);
   stonehead.position.y = -2;
-  stonehead.scale.set(8, 8, 8);
+  stonehead.scale.set(35, 35, 35);
   
    });
 
-
+scene2.background = backgroundTexture
 scene2.add(ambientLight);
+scene2.add(light);
+scene2.add(light2);
+// scene2.add(pointlight);
+// scene2.add(pointlight2);
+// scene2.add( pointLightHelper );
+// scene2.add( axesHelper );
 renderer.render(scene2, camera);
 
 //////////////////////////////////////////////
@@ -203,11 +263,15 @@ const scene3 = new THREE.Scene();
 
       bone.rotateX(110);
   bone.position.y = -2;
-  bone.scale.set(10, 10, 10);
+  bone.scale.set(35, 35, 35);
   
    });
-
-scene3.add(ambientLight);
+scene3.background = backgroundTexture
+scene3.add(S3ambientLight);
+scene3.add(S3light);
+scene3.add(S3light2);
+scene3.add(S3pointlight);
+scene3.add(S3pointlight2);
 renderer.render(scene3, camera);
 
 
@@ -229,13 +293,17 @@ const scene4 = new THREE.Scene();
       scene4.add(sps);
       console.log('sps pyramid added to scene 4');
 
-    sps.rotateX(110);
+    sps.rotateX(180);
     //  sps.position.y = -2;
-     sps.scale.set(15, 15, 15);
+     sps.scale.set(95, 95, 95);
   
    });
-
-scene4.add(ambientLight);
+scene4.background = backgroundTexture2
+scene4.add(S4ambientLight);
+scene4.add(S4light);
+scene4.add(S4light2);
+scene4.add(S4pointlight);
+scene4.add(S4pointlight2);
 renderer.render(scene4, camera);
 
 
@@ -257,13 +325,19 @@ const scene5 = new THREE.Scene();
       scene5.add(MP);
       console.log('mundo perdido added to scene 5');
 
-      MP.rotateY(110);
+      MP.rotateY(270);
+      // MP.position.set(-5, 0, 0)
+      // MP.rotateX(30)
     //  MP.position.y = -2;
     MP.scale.set(15, 15, 15);
   
    });
-
-scene5.add(ambientLight);
+scene5.background = backgroundTexture2
+scene5.add(S5ambientLight);
+scene5.add(S5light);
+scene5.add(S5light2);
+scene5.add(S5pointlight);
+scene5.add(S5pointlight2);
 renderer.render(scene5, camera);
 
 
@@ -284,6 +358,11 @@ renderer.render(scene5, camera);
 
 
 window.addEventListener('DOMContentLoaded', init, false);
+
+
+
+
+
 
 
 
